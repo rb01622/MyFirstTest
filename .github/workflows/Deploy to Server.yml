@@ -23,4 +23,4 @@ jobs:
 
     - name: Copy Files to Server
       run: |
-        scp -r -i ~/.ssh/id_ed25519 ./MyFirstTest/* ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
+        scp -i ~/.ssh/id_ed25519 -r . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.TARGET_PATH }}
