@@ -12,7 +12,8 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-
+    - name: Debug host value
+      run: echo "SSH_HOST=${{ secrets.SSH_HOST }}"
     - name: Setup SSH Key
       run: |
         mkdir -p ~/.ssh
